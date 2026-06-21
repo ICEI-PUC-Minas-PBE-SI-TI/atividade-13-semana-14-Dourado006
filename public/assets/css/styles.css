@@ -1,0 +1,689 @@
+/* =============================================
+   Gearhead Project - style.css
+   Autor: Victor Dourado
+   ============================================= */
+
+:root {
+    --primary: #f39c12;
+    --dark: #0f0f0f;
+    --gray: #1e1e1e;
+    --text: #e0e0e0;
+    --card-bg: #1a1a1a;
+    --border: #2e2e2e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+/* =============================================
+   HEADER
+   ============================================= */
+.main-header {
+    background: #000;
+    padding: 1.2rem 0;
+    border-bottom: 2px solid var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-style: italic;
+    letter-spacing: 0px;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.logo h1 span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+}
+
+.search-mockup {
+    display: flex;
+}
+
+.search-mockup input {
+    padding: 8px 12px;
+    border: none;
+    background: #222;
+    color: white;
+    border-radius: 4px 0 0 4px;
+    width: 200px;
+}
+
+.search-mockup button {
+    background: var(--primary);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+/* Botão Voltar no Header */
+.btn-voltar {
+    align-items: center;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-voltar:hover { color: white; }
+
+/* =============================================
+   BREADCRUMB
+   ============================================= */
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+.breadcrumb-item a {
+    color: var(--primary);
+    text-decoration: none;
+}
+.breadcrumb-item.active {
+    color: #aaa;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #555;
+}
+
+/* =============================================
+   SEÇÃO LATERAL
+   ============================================= */
+.side-menu {
+    background: var(--gray);
+    padding: 20px;
+    border-radius: 12px;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.side-menu h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin-bottom: 12px;
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 0.85rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.side-menu ul li a:hover,
+.side-menu ul li a.active {
+    color: var(--primary);
+}
+
+/* Newsletter */
+.newsletter-box {
+    margin-top: 30px;
+    background: #111;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary);
+}
+
+.newsletter-box input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    background: #252525;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 4px;
+}
+
+.newsletter-box button {
+    width: 100%;
+    background: var(--primary);
+    color: #000;
+    border: none;
+    padding: 8px;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* =============================================
+   CARDS - HOME
+   ============================================= */
+.card-item {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.4s;
+    border: 1px solid var(--border);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-item:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 30px rgba(243, 156, 18, 0.15);
+}
+
+.card-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.badge-tech {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: black;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+}
+
+.card-content {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-categoria {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.card-content h3 {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.card-content p {
+    font-size: 0.85rem;
+    color: #999;
+    flex: 1;
+    margin-bottom: 14px;
+}
+
+.card-footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+    margin-top: auto;
+    gap: 10px;
+}
+
+.card-preco {
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+.btn-detalhes {
+    text-decoration: none;
+    color: #000;
+    background: var(--primary);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+.btn-detalhes:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* =============================================
+   PÁGINA DE DETALHES
+   ============================================= */
+.detail-img-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.detail-main-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+.badge-tech-detail {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: black;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: 900;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.detail-info-box {
+    background: var(--gray);
+    border-radius: 12px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    height: 100%;
+}
+
+.detail-title {
+    font-size: 1.8rem;
+    color: var(--primary);
+    font-weight: 800;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.detail-short-desc {
+    color: #bbb;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Grid de specs */
+.detail-specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.spec-item {
+    background: #111;
+    border-radius: 8px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+}
+
+.spec-label {
+    display: block;
+    font-size: 0.7rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.spec-label i {
+    margin-right: 4px;
+    color: var(--primary);
+}
+
+.spec-value {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ddd;
+}
+
+.spec-value.highlight {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+/* Botões de ação */
+.detail-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-action {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s;
+    border: none;
+}
+
+.btn-action-primary {
+    background: var(--primary);
+    color: #000;
+}
+.btn-action-primary:hover {
+    background: #fff;
+    color: #000;
+}
+
+.btn-action-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+.btn-action-outline:hover {
+    background: var(--primary);
+    color: #000;
+}
+
+/* Seção de descrição e tags */
+.detail-section-box {
+    background: var(--gray);
+    border-radius: 12px;
+    padding: 24px 28px;
+    border: 1px solid var(--border);
+}
+
+.detail-section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.detail-section-title i {
+    margin-right: 6px;
+}
+
+.detail-full-desc {
+    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Tags / Chips */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-chip {
+    background: #111;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: 0.2s;
+    cursor: default;
+}
+.tag-chip:hover {
+    background: var(--primary);
+    color: #000;
+}
+
+/* =============================================
+   FORMULÁRIO DE CADASTRO
+   ============================================= */
+.form-box {
+    background: var(--gray);
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.form-header {
+    padding: 28px 32px;
+    background: #111;
+    border-bottom: 1px solid var(--border);
+}
+
+.form-header h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 6px;
+}
+
+.form-header p {
+    color: #888;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+#cadastroForm {
+    padding: 32px;
+}
+
+.form-label {
+    color: #ccc;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.required {
+    color: var(--primary);
+}
+
+.form-control-custom {
+    width: 100%;
+    background: #111;
+    border: 1px solid var(--border);
+    color: #e0e0e0;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+    outline: none;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.form-control-custom:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(243, 156, 18, 0.15);
+}
+
+.form-control-custom option {
+    background: #1a1a1a;
+}
+
+/* Toggle switch */
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-label {
+    width: 46px;
+    height: 24px;
+    background: #333;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+
+.toggle-label::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #888;
+    transition: 0.3s;
+}
+
+.toggle-input:checked + .toggle-label {
+    background: var(--primary);
+}
+
+.toggle-input:checked + .toggle-label::after {
+    left: 25px;
+    background: #000;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 8px;
+    flex-wrap: wrap;
+}
+
+/* =============================================
+   SEÇÃO TITLE (HOME)
+   ============================================= */
+.section-title h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: white;
+}
+.section-title p {
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 6px;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.main-footer {
+    background-color: #000;
+    padding: 60px 0 30px 0;
+    margin-top: 80px;
+    border-top: 1px solid #222;
+}
+
+.main-footer h5 {
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.main-footer p {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.social-links a {
+    color: var(--primary);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.6rem;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: white;
+    transform: translateY(-5px);
+}
+
+.footer-bottom p {
+    color: #444;
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+/* =============================================
+   RESPONSIVIDADE
+   ============================================= */
+@media (max-width: 768px) {
+    .side-menu {
+        position: static;
+        margin-top: 40px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .detail-title {
+        font-size: 1.4rem;
+    }
+
+    .detail-specs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-main-img {
+        height: 260px;
+    }
+
+    #cadastroForm {
+        padding: 20px;
+    }
+
+    .form-header {
+        padding: 20px;
+    }
+
+    .detail-info-box {
+        padding: 18px;
+        margin-top: 12px;
+    }
+}

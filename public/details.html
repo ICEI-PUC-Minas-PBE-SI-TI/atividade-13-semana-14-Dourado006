@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Projeto | Gearhead Project</title>
+    <link rel="icon" type="image/png" href="images/Icon.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container-fluid px-lg-5 d-flex flex-wrap justify-content-between align-items-center">
+            <div class="logo">
+                <h1>GEAR<span>HEADs</span></h1>
+            </div>
+            
+            <nav class="top-nav d-none d-lg-block">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">Categorias</a></li>
+                </ul>
+            </nav>
+
+            <a href="index.html" class="btn-voltar d-none d-lg-flex">
+                <i class="fas fa-arrow-left me-2"></i> Voltar
+            </a>
+        </div>
+    </header>
+
+    <div class="container-fluid px-lg-5 mt-4 mb-5">
+        
+        <div id="loadingMsg" class="text-center py-5">
+            <div class="spinner-border text-warning" role="status"></div>
+            <p class="mt-3 text-muted">Carregando detalhes do projeto...</p>
+        </div>
+
+        <div id="errorMsg" class="alert alert-danger d-none" role="alert">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            <span id="errorText">Erro ao carregar os detalhes.</span>
+        </div>
+
+        <div id="detailsContent" class="d-none">
+            
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" id="breadcrumbTitle" aria-current="page">Carregando...</li>
+                </ol>
+            </nav>
+
+            <div class="row g-5">
+                <div class="col-12 col-lg-7">
+                    <div class="details-image-wrapper position-relative">
+                        <span id="detalheBadge" class="badge-tech position-absolute top-0 start-0 m-3 z-1">N/D</span>
+                        <img id="detalheImagem" src="" class="img-fluid rounded shadow-lg w-100" alt="Imagem do Projeto">
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-5">
+                    <span id="detalheCategoria" class="card-categoria mb-2 d-inline-block text-uppercase fw-bold text-warning">Categoria</span>
+                    <h2 id="detalheTitulo" class="fw-bold mb-3">Título do Projeto</h2>
+                    <p id="detalheDescricaoCurta" class="text-muted fs-5 mb-4">Descrição curta do projeto aparecerá aqui.</p>
+
+                    <div class="price-box mb-4 p-3 bg-dark text-white rounded">
+                        <small class="d-block text-uppercase text-secondary mb-1">Valor Estimado</small>
+                        <h3 id="detalhePreco" class="text-warning m-0 fw-bold">R$ 0,00</h3>
+                    </div>
+
+                    <h4 class="fw-bold mb-3 border-bottom pb-2">Especificações</h4>
+                    <ul class="list-group list-group-flush mb-4 bg-transparent">
+                        <li class="list-group-item bg-transparent d-flex justify-content-between px-0">
+                            <strong><i class="fas fa-tachometer-alt me-2"></i>Potência:</strong> <span id="detalhePotencia"></span>
+                        </li>
+                        <li class="list-group-item bg-transparent d-flex justify-content-between px-0">
+                            <strong><i class="fas fa-cogs me-2"></i>Motor:</strong> <span id="detalheMotor"></span>
+                        </li>
+                        <li class="list-group-item bg-transparent d-flex justify-content-between px-0">
+                            <strong><i class="fas fa-user-wrench me-2"></i>Preparador:</strong> <span id="detalheProprietario"></span>
+                        </li>
+                        <li class="list-group-item bg-transparent d-flex justify-content-between px-0">
+                            <strong><i class="far fa-calendar-alt me-2"></i>Ano:</strong> <span id="detalheAno"></span>
+                        </li>
+                        <li class="list-group-item bg-transparent d-flex justify-content-between px-0">
+                            <strong><i class="fas fa-globe me-2"></i>País:</strong> <span id="detalhePais"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 col-lg-8">
+                    <h4 class="fw-bold mb-3 border-bottom pb-2">Sobre o Projeto</h4>
+                    <p id="detalheDescricaoCompleta" class="lh-lg" style="white-space: pre-line;"></p>
+                </div>
+                <div class="col-12 col-lg-4 mt-4 mt-lg-0">
+                    <h4 class="fw-bold mb-3 border-bottom pb-2">Tags</h4>
+                    <div id="detalheTags" class="d-flex flex-wrap gap-2 mt-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer mt-auto">
+        <div class="container text-center">
+            <h5>REALIZAÇÃO</h5>
+            <p>Trabalho Prático - PUC Minas | Aluno: Victor Dourado</p>
+            <div class="social-links mt-3">
+                <a href="https://github.com/Dourado006" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/victor-dourado-792230355/" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/victor.dourado.006/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-bottom mt-4">
+                <p>&copy; 2026 Gearhead Project | Dourado Company.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/scripts/details.js"></script>
+</body>
+</html>
