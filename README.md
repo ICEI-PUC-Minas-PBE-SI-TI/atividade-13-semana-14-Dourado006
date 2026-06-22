@@ -1,23 +1,14 @@
 
 # Trabalho Prático - Semana 14
 
-A partir dos dados disponíveis em seu projeto, vamos explorar formas de visualização que permitam apresentar essas informações de maneira clara, interativa e significativa. Você poderá utilizar gráficos (barras, linhas, pizza), mapas, calendários ou outras formas de visualização. Seu desafio é desenvolver uma página Web capaz de organizar, processar e exibir os dados de forma compreensível e visualmente atraente.
-
-Com base no tipo de projeto escolhido, você deverá propor **visualizações que estimulem a interpretação, o agrupamento e a apresentação criativa dos dados**, trabalhando tanto os aspectos lógicos quanto os visuais da aplicação.
-
-Sugerimos o uso das seguintes ferramentas acessíveis: [FullCalendar](https://fullcalendar.io/), [Chart.js](https://www.chartjs.org/), [Mapbox](https://docs.mapbox.com/api/), para citar algumas.
-
 ## Informações Gerais
 
-- Nome:
-- Matrícula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Victor Reis Dourado Pordeus  
+- Matrícula: 907213
+- Proposta de projeto escolhida: Site Automobilistico
+- Breve descrição sobre seu projeto: Site para insercão de projetos
 
-**Print da tela com a implementação**
+<img width="1917" height="1077" alt="image" src="https://github.com/user-attachments/assets/e6e07508-1e33-4098-8e00-efe7549a408a" />
 
-<< Coloque aqui uma breve explicação da implementação feita nesta etapa>>
+Foi implementado um Dashboard da potencia dos carros.
 
-<<  COLOQUE A IMAGEM DA TELA 1 AQUI >>
-
-<<  COLOQUE A IMAGEM DA TELA 2 AQUI >>
